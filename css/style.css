@@ -1,193 +1,431 @@
 * {
-    margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Fredoka", sans-serif;
-    font-size: 16px;
-  }
-  
-  h1 {
-    font-size: 5rem;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-  }
-  
-  :root {
-    --pad-default: 50px;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 960px;
-    min-width: 300px;
-    margin: 0 auto;
-  }
-  
-  .jumbotron {
-    width: 100%;
-    max-width: 1200px;
-    min-width: 300px;
-    border: 2px dashed rgb(198, 79, 79);
-    margin: 0 auto;
-    position: relative;
-    top: var(--pad-default);
-  }
-  
-  .col-container {
-    width: 100%;
-    max-width: calc(100% - 1em);
-    padding: 0 1em;
-    margin: auto;
-  }
-  
-  /* FLEX  */
-  .flex-row {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-  }
-  
-  .flex-col {
-      display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .just-between {
-      justify-content: space-between;
-  }
-  
-  .just-around {
-      justify-content: space-around;
-  }
-  
-  .just-end {
-      justify-content: end;
-  }
-  
-  .gap-med {
-    gap: 2em;
-  }
-  
-  .col {
-    flex-grow: 1;
-  }
-  
-  .col-large {
-    flex-grow: 2;
-  }
-  
-  /* SECTIONS  */
-  .header-div {
-    width: 100%;
-    min-height: 50px;
-    position: fixed;
-    z-index: 1;
-    background-color: rgb(183, 102, 9);
-    border: 2px solid black;
-  }
-  
-  .footer-div {
-    min-height: 300px;
-    background-color: black;
-  }
-  
-  .jumbo {
-    min-height: 600px;
-    padding: var(--pad-default) 0 0;
-    background-color: rgb(69, 155, 231);
-  }
-  
-  .section {
-    min-height: 300px;
-    padding: var(--pad-default) 0;
-    border: 2px dashed rgb(109, 77, 139);
-  }
-  
-  .pad-double {
-    padding: calc(var(--pad-default) * 2) 0;
-  }
-  
-  .pad-top-double {
-    padding-top: calc(var(--pad-default) * 2);
-  }
-  
-  /* CONTENT  */
-  .jumbotron .col {
-    height: 500px;
-  }
-  
-  .plan {
-    padding: 10px;
-    background-color: #65d90d;
-  }
-  
-  .radio {
-    padding: 30px 0;
-  }
-  
-  .block-span {
-    display: block;
-  }
-  
-  .pad-med {
-    padding: 2em 2em;
-  }
-  
-  .pad-med-top {
-    padding: 2em 0;
-  }
-  
-  .pad-med-side {
-    padding: 0 2em;
-  }
-  
-  .pad-top-small {
-    padding-top: 1em;
-  }
-  
-  .mar-med {
-    margin: 2em 0;
-  }
-  
-  .partner {
-    height: 400px;
-    background-color:#65d90d;
-  }
-  
-  .business {
-    height: 800px;
-    background-color: #65d90d;
-  }
-  
-  .clients {
-    height: 300px;
-    background-color: #65d90d;
-  }
-  
-  .trial {
-    height: 100px;
-    background-color: #65d90d;
-  }
-  
-  .faq {
-    height: 400px;
-    background-color: #65d90d;
-  }
-  
-  /* TEST  */
-  
-  
-  
-  
-  
-  
-  
-  .bor-red {
-    border: 2px dashed red;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header Classes */
+
+nav {
+  position: sticky;
+  top: 0;
+  padding: 1.5rem 1rem;
+  background-color: white;
+  z-index: 5;
+}
+
+nav li {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.left-menu-container {
+  padding-left: 2rem;
+}
+
+.right-menu-container {
+  padding-right: 2rem;
+}
+
+.jumbo {
+  background-color: #B4D0E7;
+  margin-bottom: 100px;
+}
+
+.jumbo .container.large-container {
+  position: relative;
+}
+
+.jumbo .down-arrow {
+  position: absolute;
+  bottom: 10px;
+  font-size: 50px;
+}
+
+.jumbo h1 {
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+  padding-bottom: 2.5rem;
+}
+
+.jumbo a.btn {
+  margin: 2rem 0;
+}
+
+.jumbo p {
+  line-height: 1.2rem;
+}
+
+.jumbo-main-content {
+  position: relative;
+  top: 100px;
+}
+
+.jumbo .container.large-container {
+  padding-top: 0;
+}
+
+.jumbo-main-content .col {
+  flex-basis: 30%;
+}
+
+.jumbo-img {
+  flex-basis: 70%;
+  flex-grow: 5;
+}
+
+.jumbo-img img {
+  width: 100%;
+}
+
+/* Containers */
+
+.container {
+  margin: auto;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.large-container {
+  max-width: 1150px;
+}
+
+.normal-container {
+  max-width: 960px;
+}
+
+/* Flex Classes */
+
+.flex {
+  display: flex;
+}
+
+.flex-normal-gap {
+  gap: 2.5rem;
+}
+
+.flex-small-gap {
+  gap: 2rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.col-3 {
+  width: calc(100% / 3 - 1.5rem);
+  flex-grow: 1;
+}
+
+/* Main Classes */
+
+main .bill-section h2 {
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.bill-section form {
+  margin-bottom: 2rem;
+}
+
+.bill-section label {
+  margin-right: 4rem;
+}
+
+.card {
+  min-height: 200px;
+  width: calc(100% / 3);
+  margin-bottom: 2rem;
+  border: 1px solid lightgray;
+}
+
+.card-titles p {
+  font-size: 0.9rem;
+}
+
+.card-content {
+  padding: 2rem 1.5rem;
+}
+
+.card-content ul {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.card-content li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.card-content .btn {
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.card-content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card-content h5 {
+  margin-bottom: 1rem;
+}
+
+.card-buttons {
+  font-size: 0.85rem;
+}
+
+.card-buttons .btn {
+  width: 95%;
+}
+
+.full-size {
+  width: 100%;
+}
+
+.card.full-size .card-titles {
+  width: 65%;
+}
+
+.card.full-size .btn-container {
+  width: 35%;
+  text-align: right;
+}
+
+.card.full-size h5 {
+  margin-bottom: 3rem;
+}
+
+.card-description {
+  height: 250px;
+}
+
+.card-header {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid lightgray;
+  font-size: 0.8rem;
+  background-color: white;
+}
+
+.large-col {
+  width: 60%;
+}
+
+.contact-partner .small-col {
+  width: 40%;
+  padding: 3rem 1rem 0 4rem;
+}
+
+.contact-partner img {
+  width: 100%;
+}
+
+.contact-partner h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-partner p {
+  line-height: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.underline-link {
+  text-decoration: underline;
+  color: blue;
+}
+
+.small-line {
+  border-bottom: 1px solid lightgray;
+  width: 50px;
+  padding: 1.5rem 1rem;
+  margin-bottom: 3rem;
+}
+
+.operations-card img {
+  width: 100%;
+}
+
+.operations-card h6 {
+  font-size: 1.4rem;
+  padding-top: .2rem;
+  padding-bottom: 2rem;
+}
+
+.operations-card p {
+  font-size: .9rem;
+  line-height: 1.2rem;
+}
+
+.operations h3 {
+  font-size: 2.5rem;
+  padding-top: 7rem;
+  padding-bottom: 3.5rem;
+}
+
+/* Icon classes */
+
+.icon-container {
+  width: 1.5rem;
+  flex-shrink: 0;
+}
+
+.fa-check {
+  color: blue;
+}
+
+/* Buttons */
+
+.btn {
+  cursor: pointer;
+  background-color: #2A61FF;
+  padding: 0.7rem 2rem;
+  display: inline-block;
+  color: white;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.btn-gray {
+  border: 1px solid rgb(99, 93, 93);
+  color: rgb(99, 93, 93);
+  background-color: #FFFFFF;
+}
+
+/* Clients Image Classes */
+
+.clients .f-centered img {
+  width: 50%;
+  filter: invert();
+}
+
+.clients-foot {
+  background-color: #B4D0E7;
+  padding-top: 3rem;
+}
+
+.f-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.designit {
+  background-color: #A2D39B;
+  border: 15px solid #D1E9CD;
+}
+
+.asu {
+  background-color: #61082A;
+}
+
+.uflorida {
+  background-color: #3193CE;
+}
+
+.topps {
+  background-color: #F51C1F;
+}
+
+.wbr {
+  background-color: #D5001E;
+}
+
+.hearst {
+  background-color: #B4D0E7;
+}
+
+.lonely {
+  background-color: #0E2481;
+}
+
+.clearc {
+  background-color: #FBD831;
+}
+
+.central-col {
+  width: calc(100vw / 3);
+}
+
+.col {
+  width: calc(100vw / 6 - 4px);
+  height: calc(100vw / 6 - 4px);
+}
+
+.designit-info {
+  background-color: #F5F5F5;
+  height: 100%;
+  padding: 4rem 2rem;
+}
+
+.designit-info img {
+  width: 50%;
+}
+
+.clients h2 {
+  width: 65%;
+  font-size: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.clients-header a {
+  display: inline-block;
+  margin-bottom: 6rem;
+}
+
+.designit-info p {
+  margin-bottom: 4rem;
+}
+
+.designit-info .small-line {
+  width: 100px;
+}
+
+.clients .clients-foot h2 {
+  color: #61082A;
+  padding-top: 0;
+  width: 50%;
+}
+
+.clients-foot .btn-gray {
+  border: none;
+  font-size: 0.9rem;
+}
+
+
+
+/* Footer Classes */
